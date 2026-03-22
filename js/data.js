@@ -28,11 +28,11 @@ const CATEGORIES = [
     description: "The greatest anime of all time, voted by you.",
     nominees: [
       { name: "Frieren: Beyond Journey's End", 
-        image: "assets/images/egofm-trailer_frieren_c_01", 
+        image: "assets/images/egofm-trailer_frieren_c_01.jpg", 
         video: "assets/clips/Frieren Beyond Journey's End「AMV」- Still Here [4K-Edit] - Hagen AMV's (1080p, h264).mp4", 
         secondary: "Madhouse" 
       },
-      { name: "Uma Musume: Cinderella Grey", image: "assets/images/uma", video: "", secondary: "" },
+      { name: "Uma Musume: Cinderella Grey", image: "assets/images/uma.jpg", video: "", secondary: "" },
       { name: "Anime Title 3", image: "", video: "assets/clips/Frieren Beyond Journey's End「AMV」- Still Here [4K-Edit] - Hagen AMV's (1080p, h264).mp4", secondary: "" },
       { name: "Anime Title 4", image: "", video: "", secondary: "" },
       { name: "Anime Title 5", image: "", video: "", secondary: "" },
