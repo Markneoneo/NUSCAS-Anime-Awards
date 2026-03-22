@@ -6,6 +6,16 @@
 //    image: "path/to/image.jpg"  OR  "" for placeholder
 //    video: "path/to/clip.mp4"   OR  "" for no video
 //    secondary: "e.g. Character name or studio" (optional)
+
+// Example:
+// {
+// name: "Frieren: Beyond Journey's End",
+// image: "assets/images/frieren.jpg",    ← path to image file
+// video: "assets/clips/frieren.mp4",     ← path to video clip (or "" for none)
+// secondary: "Madhouse"                  ← studio / character / artist info
+// }
+// Images: save to assets/images/ folder
+// Videos: save to assets/clips/ folder (keep clips short: 15–30 seconds)
 // ============================================================
 
 const CATEGORIES = [
@@ -17,7 +27,10 @@ const CATEGORIES = [
     name: "Best Anime",
     description: "The greatest anime of all time, voted by you.",
     nominees: [
-      { name: "Anime Title 1", image: "", video: "", secondary: "" },
+      { name: "Frieren: Beyond Journey's End", 
+        image: "assets/images/egofm-trailer_frieren_c_01", 
+        video: "assets/clips/Frieren Beyond Journey's End「AMV」- Still Here [4K-Edit] - Hagen AMV's (1080p, h264).mp4", 
+        secondary: "Madhouse" },
       { name: "Anime Title 2", image: "", video: "", secondary: "" },
       { name: "Anime Title 3", image: "", video: "", secondary: "" },
       { name: "Anime Title 4", image: "", video: "", secondary: "" },
