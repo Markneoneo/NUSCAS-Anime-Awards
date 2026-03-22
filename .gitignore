@@ -1,0 +1,5 @@
+# Ignore admin folder or file
+admin/
+
+# Ignore the setup guide
+SETUP_GUIDE.md

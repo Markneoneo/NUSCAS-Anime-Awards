@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NUS CAS Anime Awards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;700;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HERO HEADER -->
+  <header class="site-header">
+    <div class="header-bg-effects">
+      <div class="sparkle s1">✦</div>
+      <div class="sparkle s2">◆</div>
+      <div class="sparkle s3">✦</div>
+      <div class="sparkle s4">◆</div>
+      <div class="sparkle s5">✦</div>
+      <div class="sparkle s6">◆</div>
+    </div>
+    <div class="header-inner">
+      <div class="logo-wrap">
+        <img src="assets/logo.png" alt="NUS CAS Logo" class="site-logo" onerror="this.style.display='none'">
+      </div>
+      <div class="header-title-block">
+        <p class="header-eyebrow"><span class="jp-text">第1回</span> 1st Annual</p>
+        <h1 class="site-title">
+          <span class="title-cas">CAS</span><span class="title-uals">uals</span>
+          <span class="title-line2">Anime Awards</span>
+        </h1>
+        <p class="header-subtitle">Cast your votes for the best in anime!</p>
+      </div>
+    </div>
+
+    <!-- Vote All Button -->
+    <div class="header-cta">
+      <div class="voting-status-bar">
+        <div class="progress-info">
+          <span id="categories-voted">0</span> / <span id="categories-total">25</span> categories voted
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="vote-progress-bar"></div>
+        </div>
+      </div>
+      <button class="btn-submit-all" id="submit-all-btn" onclick="submitAllVotes()">
+        <span class="btn-icon">🏆</span> Submit All Votes
+      </button>
+    </div>
+  </header>
+
+  <!-- ANNOUNCEMENT BANNER -->
+  <div class="announcement-banner" id="announcement-banner">
+    <span class="announce-icon">📢</span>
+    <span id="announce-text">Voting is now open! Select your favourite nominee in each category below.</span>
+    <button class="announce-close" onclick="document.getElementById('announcement-banner').style.display='none'">✕</button>
+  </div>
+
+  <!-- CATEGORY FILTER NAV -->
+  <nav class="category-nav" id="category-nav">
+    <div class="category-nav-inner">
+      <button class="cat-filter active" data-filter="all">All</button>
+      <button class="cat-filter" data-filter="general">General</button>
+      <button class="cat-filter" data-filter="craft">Craft</button>
+      <button class="cat-filter" data-filter="genre">Genre</button>
+      <button class="cat-filter" data-filter="character">Character</button>
+      <button class="cat-filter" data-filter="music">Music & Audio</button>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content" id="main-content">
+    <div class="categories-container" id="categories-container">
+      <!-- Categories injected by JS -->
+    </div>
+  </main>
+
+  <!-- SUBMISSION MODAL -->
+  <div class="modal-overlay" id="submit-modal" style="display:none">
+    <div class="modal-box">
+      <div class="modal-header">
+        <span class="modal-icon">🎌</span>
+        <h2>Confirm Your Votes</h2>
+      </div>
+      <div class="modal-body" id="modal-vote-summary">
+        <!-- summary injected by JS -->
+      </div>
+      <div class="modal-unvoted-warning" id="modal-unvoted" style="display:none">
+        <span>⚠️</span> <span id="unvoted-text"></span>
+      </div>
+      <div class="modal-actions">
+        <button class="btn-cancel" onclick="closeModal()">Go Back</button>
+        <button class="btn-confirm" id="confirm-submit-btn" onclick="confirmSubmit()">
+          <span>Submit Votes 🏆</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUCCESS TOAST -->
+  <div class="toast" id="toast" style="display:none">
+    <span class="toast-icon">✅</span>
+    <span id="toast-msg">Vote submitted!</span>
+  </div>
+
+  <!-- ALREADY VOTED MODAL -->
+  <div class="modal-overlay" id="voted-modal" style="display:none">
+    <div class="modal-box voted-modal-box">
+      <div class="voted-icon">🏆</div>
+      <h2>You've Already Voted!</h2>
+      <p>Your votes have been recorded. Results will be revealed at the award ceremony.</p>
+      <p class="voted-sub">Thank you for participating in the NUS CAS Anime Awards!</p>
+      <button class="btn-confirm" onclick="document.getElementById('voted-modal').style.display='none'">Close</button>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img src="assets/logo.png" alt="NUS CAS" class="footer-logo" onerror="this.style.display='none'">
+      <div class="footer-text">
+        <p class="footer-name">NUS Comics &amp; Animation Society</p>
+        <p class="footer-sub">CASuals Anime Awards &nbsp;·&nbsp; All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
