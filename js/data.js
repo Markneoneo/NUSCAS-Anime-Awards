@@ -268,6 +268,126 @@ const CATEGORIES = [
       { name: "Anime Title 6", image: "", video: "", secondary: "" },
     ]
   },
+  {
+    id: "best-chinese-anime",
+    tag: "Genre",
+    filter: "genre",
+    name: "Best Chinese Anime",
+    description: "The most outstanding animation originating from China.",
+    nominees: [
+      { name: "Anime Title 1", image: "", video: "", secondary: "" },
+      { name: "Anime Title 2", image: "", video: "", secondary: "" },
+      { name: "Anime Title 3", image: "", video: "", secondary: "" },
+      { name: "Anime Title 4", image: "", video: "", secondary: "" },
+      { name: "Anime Title 5", image: "", video: "", secondary: "" },
+      { name: "Anime Title 6", image: "", video: "", secondary: "" },
+    ]
+  },
+  {
+    id: "best-mystery",
+    tag: "Genre",
+    filter: "genre",
+    name: "Best Mystery",
+    description: "The most intriguing and suspenseful anime that kept you guessing.",
+    nominees: [
+      { name: "Anime Title 1", image: "", video: "", secondary: "" },
+      { name: "Anime Title 2", image: "", video: "", secondary: "" },
+      { name: "Anime Title 3", image: "", video: "", secondary: "" },
+      { name: "Anime Title 4", image: "", video: "", secondary: "" },
+      { name: "Anime Title 5", image: "", video: "", secondary: "" },
+      { name: "Anime Title 6", image: "", video: "", secondary: "" },
+    ]
+  },
+  {
+    id: "best-sci-fi",
+    tag: "Genre",
+    filter: "genre",
+    name: "Best Sci-Fi",
+    description: "The most imaginative and thought-provoking science fiction anime.",
+    nominees: [
+      { name: "Anime Title 1", image: "", video: "", secondary: "" },
+      { name: "Anime Title 2", image: "", video: "", secondary: "" },
+      { name: "Anime Title 3", image: "", video: "", secondary: "" },
+      { name: "Anime Title 4", image: "", video: "", secondary: "" },
+      { name: "Anime Title 5", image: "", video: "", secondary: "" },
+      { name: "Anime Title 6", image: "", video: "", secondary: "" },
+    ]
+  },
+  {
+    id: "best-horror",
+    tag: "Genre",
+    filter: "genre",
+    name: "Best Horror",
+    description: "The most terrifying and spine-chilling anime of the year.",
+    nominees: [
+      { name: "Anime Title 1", image: "", video: "", secondary: "" },
+      { name: "Anime Title 2", image: "", video: "", secondary: "" },
+      { name: "Anime Title 3", image: "", video: "", secondary: "" },
+      { name: "Anime Title 4", image: "", video: "", secondary: "" },
+      { name: "Anime Title 5", image: "", video: "", secondary: "" },
+      { name: "Anime Title 6", image: "", video: "", secondary: "" },
+    ]
+  },
+  {
+    id: "best-thriller",
+    tag: "Genre",
+    filter: "genre",
+    name: "Best Thriller",
+    description: "The most intense and edge-of-your-seat anime experience.",
+    nominees: [
+      { name: "Anime Title 1", image: "", video: "", secondary: "" },
+      { name: "Anime Title 2", image: "", video: "", secondary: "" },
+      { name: "Anime Title 3", image: "", video: "", secondary: "" },
+      { name: "Anime Title 4", image: "", video: "", secondary: "" },
+      { name: "Anime Title 5", image: "", video: "", secondary: "" },
+      { name: "Anime Title 6", image: "", video: "", secondary: "" },
+    ]
+  },
+  {
+    id: "best-sports",
+    tag: "Genre",
+    filter: "genre",
+    name: "Best Sports",
+    description: "The most inspiring, competitive, and action-packed sports anime.",
+    nominees: [
+      { name: "Anime Title 1", image: "", video: "", secondary: "" },
+      { name: "Anime Title 2", image: "", video: "", secondary: "" },
+      { name: "Anime Title 3", image: "", video: "", secondary: "" },
+      { name: "Anime Title 4", image: "", video: "", secondary: "" },
+      { name: "Anime Title 5", image: "", video: "", secondary: "" },
+      { name: "Anime Title 6", image: "", video: "", secondary: "" },
+    ]
+  },
+  {
+    id: "best-mecha",
+    tag: "Genre",
+    filter: "genre",
+    name: "Best Mecha",
+    description: "The most spectacular and gripping anime featuring giant robots.",
+    nominees: [
+      { name: "Anime Title 1", image: "", video: "", secondary: "" },
+      { name: "Anime Title 2", image: "", video: "", secondary: "" },
+      { name: "Anime Title 3", image: "", video: "", secondary: "" },
+      { name: "Anime Title 4", image: "", video: "", secondary: "" },
+      { name: "Anime Title 5", image: "", video: "", secondary: "" },
+      { name: "Anime Title 6", image: "", video: "", secondary: "" },
+    ]
+  },
+  {
+    id: "best-music-idol",
+    tag: "Genre",
+    filter: "genre",
+    name: "Best Music / Idol",
+    description: "The most captivating anime centered around music, performances, and idols.",
+    nominees: [
+      { name: "Anime Title 1", image: "", video: "", secondary: "" },
+      { name: "Anime Title 2", image: "", video: "", secondary: "" },
+      { name: "Anime Title 3", image: "", video: "", secondary: "" },
+      { name: "Anime Title 4", image: "", video: "", secondary: "" },
+      { name: "Anime Title 5", image: "", video: "", secondary: "" },
+      { name: "Anime Title 6", image: "", video: "", secondary: "" },
+    ]
+  },
 
   // ── CHARACTER ────────────────────────────────────────────
   {
