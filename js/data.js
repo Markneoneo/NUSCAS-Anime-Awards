@@ -22,10 +22,10 @@ const CATEGORIES = [
     name: "Best Anime of All Time",
     nominees: [
       { name: "Clannad", image: "assets/images/compressed/clannad.webp", video: "", secondary: "Kyoto Animation" },
+      { name: "Death Note", image: "assets/images/compressed/death_note.webp", video: "", secondary: "Madhouse" },
       { name: "Frieren: Beyond Journey's End", image: "assets/images/compressed/frieren.webp", video: "", secondary: "Madhouse" },
+      { name: "Fullmetal Alchemist: Brotherhood", image: "assets/images/compressed/fmab.webp", video: "", secondary: "Bones" },
       { name: "Neon Genesis Evangelion", image: "assets/images/compressed/eva.webp", video: "", secondary: "Gainax, Tatsunoko Production" },
-      { name: "", image: "", video: "", secondary: "" },
-      { name: "", image: "", video: "", secondary: "" },
     ]
   },
 
@@ -108,9 +108,9 @@ const CATEGORIES = [
     nominees: [
       { name: "Frieren: Beyond Journey's End", image: "assets/images/compressed/frieren.webp", video: "", secondary: "Madhouse" },
       { name: "Jujutsu Kaisen", image: "assets/images/compressed/jjk.webp", video: "", secondary: "MAPPA" },
+      { name: "March Comes in Like a Lion", image: "assets/images/compressed/march_lion.webp", video: "", secondary: "Shaft" },
       { name: "Violet Evergarden", image: "assets/images/compressed/violet_evergarden.webp", video: "", secondary: "Kyoto Animation" },
-      { name: "", image: "", video: "", secondary: "" },
-      { name: "", image: "", video: "", secondary: "" },
+      { name: "Sakamoto Days", image: "assets/images/compressed/sakamoto_days.webp", video: "", secondary: "TMS Entertainment" },
     ]
   },
 
@@ -120,11 +120,11 @@ const CATEGORIES = [
     filter: "craft",
     name: "Best Character Design",
     nominees: [
-      { name: "Bleach", image: "assets/images/compressed/bleach.webp", video: "", secondary: "Studio Pierrot" },
       { name: "Gachiakuta", image: "assets/images/compressed/gachiakuta.webp", video: "", secondary: "Bones Film" },
+      { name: "Hellsing Ultimate", image: "assets/images/compressed/hellsing.webp", video: "", secondary: "Madhouse, Satelight, Graphinica" },
       { name: "JoJo's Bizarre Adventure", image: "assets/images/compressed/golden_wind.webp", video: "", secondary: "David Production" },
-      { name: "", image: "", video: "", secondary: "" },
-      { name: "", image: "", video: "", secondary: "" },
+      { name: "Land of the Lustrous", image: "assets/images/compressed/land_of_the_lustrous.webp", video: "", secondary: "Orange" },
+      { name: "The Case Study of Vanitas", image: "assets/images/compressed/vanitas.webp", video: "", secondary: "Bones" },
     ]
   },
 
@@ -136,10 +136,10 @@ const CATEGORIES = [
     description: "Recognising exceptional vision and direction in anime.",
     nominees: [
       { name: "Hayao Miyazaki", image: "assets/images/compressed/hayao_miyazaki.webp", video: "", secondary: "Spirited Away / Princess Mononoke / Howl's Moving Castle / The Boy and the Heron" },
+      { name: "Keiichirō Saitō", image: "assets/images/compressed/keiichiro.webp", video: "", secondary: "Frieren: Beyond Journey's End / Bocchi the Rock / Sonny Boy" },
       { name: "Naoko Yamada", image: "assets/images/compressed/naoko_yamada.webp", video: "", secondary: "K-On! / A Silent Voice / Liz and the Blue Bird / Tamako Market" },
       { name: "Satoshi Kon", image: "assets/images/compressed/satoshi_kon.webp", video: "", secondary: "Perfect Blue / Paprika / Millenium Actress / Tokyo Godfathers" },
       { name: "Tetsuro Araki", image: "assets/images/compressed/tetsuro_araki.jpg", video: "", secondary: "Attack on Titan / Death Note / Highschool of the Dead / Guilty Crown" },
-      { name: "Director Name 5", image: "", video: "", secondary: "Series / Film" },
     ]
   },
 
@@ -166,9 +166,9 @@ const CATEGORIES = [
     nominees: [
       { name: "Kaguya-sama: Love Is War", image: "assets/images/compressed/kaguya_sama.webp", secondary: "A-1 Pictures" },
       { name: "Horimiya", image: "assets/images/compressed/horimiya.webp", secondary: "CloverWorks" },
-      { name: "", secondary: "" },
-      { name: "", secondary: "" },
-      { name: "", secondary: "" },
+      { name: "Ouran High School Host Club", image: "assets/images/compressed/ouran_highschool.webp", secondary: "Bones" },
+      { name: "WorldEnd", image: "assets/images/compressed/worldend.webp", secondary: "Satelight, C2C" },
+      { name: "Revolutionary Girl Utena", image: "assets/images/compressed/utena.webp",  secondary: "J.C.Staff" },
     ]
   },
 
@@ -178,11 +178,11 @@ const CATEGORIES = [
     filter: "genre",
     name: "Best Comedy",
     nominees: [
+      { name: "Gintama", image: "assets/images/compressed/gintama.webp", secondary: "Sunrise" },
       { name: "Grand Blue Dreaming", image: "assets/images/compressed/grand_blue.webp", secondary: "Zero-G" },
       { name: "KonoSuba: God's Blessing on This Wonderful World!", image: "assets/images/compressed/konosuba.webp", secondary: "Studio Deen / Drive" },
-      { name: "Rent-a-Girlfriend", image: "assets/images/compressed/rent_a_girlfriend.webp", secondary: "TMS Entertainment" },
       { name: "The Eminence in Shadow", image: "assets/images/compressed/eminence.webp", secondary: "Nexus" },
-      { name: "", secondary: "" },
+      { name: "Student Council Staff Members", image: "assets/images/compressed/seitokai.webp", secondary: "GoHands" },
     ]
   },
 
@@ -193,10 +193,10 @@ const CATEGORIES = [
     name: "Best Action",
     nominees: [
       { name: "Attack on Titan", image: "assets/images/compressed/aot.webp", secondary: "Wit Studio / MAPPA" },
+      { name: "Bleach: Thousand-Year Blood War", image: "assets/images/compressed/bleach_tybw.webp", secondary: "Studio Pierrot" },
       { name: "Chainsaw Man", image: "assets/images/compressed/csm_tv.webp", secondary: "MAPPA" },
-      { name: "", secondary: "" },
-      { name: "", secondary: "" },
-      { name: "", secondary: "" },
+      { name: "Dandadan", image: "assets/images/compressed/dandadan.webp", secondary: "Science SARU" },
+      { name: "Solo Leveling", image: "assets/images/compressed/solo_leveling.webp", secondary: "A-1 Pictures" },
     ]
   },
 
@@ -220,11 +220,11 @@ const CATEGORIES = [
     filter: "genre",
     name: "Best Drama",
     nominees: [
+      { name: "From the New World", image: "assets/images/compressed/shinsekai_yori.webp", video: "", secondary: "A-1 Pictures" },
+      { name: "Scum's Wish", image: "assets/images/compressed/kuzu_no_honkai.webp", video: "", secondary: "Lerche" },
+      { name: "Sound! Euphonium", image: "assets/images/compressed/euphonium.webp", video: "", secondary: "Kyoto Animation" },
       { name: "Vinland Saga", image: "assets/images/compressed/vinland_saga.webp", video: "", secondary: "Wit Studio / MAPPA" },
-      { name: "", image: "", video: "", secondary: "" },
-      { name: "", image: "", video: "", secondary: "" },
-      { name: "", image: "", video: "", secondary: "" },
-      { name: "", image: "", video: "", secondary: "" },
+      { name: "Your Lie in April", image: "assets/images/compressed/your_lie_in_april.webp", video: "", secondary: "A-1 Pictures" },
     ]
   },
 
@@ -234,11 +234,11 @@ const CATEGORIES = [
     filter: "genre",
     name: "Best Slice of Life",
     nominees: [
+      { name: "Deaimon: Recipe for Happiness", image: "assets/images/compressed/deaimon.webp", video: "", secondary: "Encourage Films" },
+      { name: "Hyouka", image: "assets/images/compressed/hyouka.webp", video: "", secondary: "Kyoto Animation" },
       { name: "JoJo's Bizarre Adventure: Diamond Is Unbreakable", image: "assets/images/compressed/DIU.webp", video: "", secondary: "David Production" },
-      { name: "", image: "", video: "", secondary: "" },
-      { name: "", image: "", video: "", secondary: "" },
-      { name: "", image: "", video: "", secondary: "" },
-      { name: "", image: "", video: "", secondary: "" },
+      { name: "Miss Kobayashi's Dragon Maid", image: "assets/images/compressed/kobayashi.webp", video: "", secondary: "Kyoto Animation`" },
+      { name: "Secrets of the Silent Witch", image: "assets/images/compressed/secrets_of_the_silent_witch.webp", video: "", secondary: "Studio Gokumi" },
     ]
   },
 
@@ -361,11 +361,11 @@ const CATEGORIES = [
     filter: "character",
     name: "Best Main Character",
     nominees: [
+      { name: "Eren Yeager", image: "assets/images/compressed/eren.webp", video: "", secondary: "Attack on Titan" },
+      { name: "Monkey D. Luffy", image: "assets/images/compressed/luffy.webp", video: "", secondary: "One Piece" },
+      { name: "Okabe Rintarou", image: "assets/images/compressed/rintarou.webp", video: "", secondary: "Steins;Gate" },
       { name: "Rentarou Aijō", image: "assets/images/compressed/rentarou.webp", video: "", secondary: "The 100 Girlfriends Who Really, Really, Really, Really, Really Love You" },
       { name: "Thorfinn Karlsefni", image: "assets/images/compressed/thorfinn.webp", video: "", secondary: "Vinland Saga" },
-      { name: "", image: "", video: "", secondary: "" },
-      { name: "", image: "", video: "", secondary: "" },
-      { name: "", image: "", video: "", secondary: "" },
     ]
   },
 
@@ -375,11 +375,11 @@ const CATEGORIES = [
     filter: "character",
     name: "Best Supporting Character",
     nominees: [
+      { name: "Arataka Reigen", image: "assets/images/compressed/reigen.webp", video: "", secondary: "Mob Psycho 100" },
+      { name: "Bruno Bucciarati", image: "assets/images/compressed/bruno.webp", video: "", secondary: "JoJo's Bizarre Adventure: Golden Wind" },
+      { name: "Loulan", image: "assets/images/compressed/loulan.webp", video: "", secondary: "The Apothecary Diaries" },
       { name: "Marcille Donato", image: "assets/images/compressed/marcille.webp", video: "", secondary: "Delicious in Dungeon" },
-      { name: "", image: "", video: "", secondary: "" },
-      { name: "", image: "", video: "", secondary: "" },
-      { name: "", image: "", video: "", secondary: "" },
-      { name: "", image: "", video: "", secondary: "" },
+      { name: "Roronoa Zoro", image: "assets/images/compressed/zoro.webp", video: "", secondary: "One Piece" },
     ]
   },
 
@@ -390,10 +390,10 @@ const CATEGORIES = [
     name: '"Must Protect At All Costs" Character',
     nominees: [
       { name: "Chiikawa", image: "assets/images/compressed/chiikawa.webp", video: "", secondary: "Chiikawa" },
-      { name: "", image: "", video: "", secondary: "" },
-      { name: "", image: "", video: "", secondary: "" },
-      { name: "", image: "", video: "", secondary: "" },
-      { name: "", image: "", video: "", secondary: "" },
+      { name: "Emiya Shirou", image: "assets/images/compressed/emiya_shirou.webp", video: "", secondary: "Fate/stay night" },
+      { name: "Levi Ackerman", image: "assets/images/compressed/levi.webp", video: "", secondary: "Attack on Titan" },
+      { name: "Tony Tony Chopper", image: "assets/images/compressed/tony_chopper.webp", video: "", secondary: "One Piece" },
+      { name: "Ushio Okazaki", image: "assets/images/compressed/ushio.webp", video: "", secondary: "Clannad: After Story" },
     ]
   },
 
@@ -433,10 +433,10 @@ const CATEGORIES = [
     name: "Best Ending Sequence",
     nominees: [
       { name: "Anytime Anywhere - milet", image: "assets/images/compressed/frieren.webp", video: "", secondary: "Frieren: Beyond Journey's End" },
-      { name: "", image: "", video: "", secondary: "" },
-      { name: "", image: "", video: "", secondary: "" },
-      { name: "", image: "", video: "", secondary: "" },
-      { name: "", image: "", video: "", secondary: "" },
+      { name: "Departures - EGOIST", image: "assets/images/compressed/departures.webp", video: "", secondary: "Guilty Crown" },
+      { name: "Hare no Hi ni - Reira Ushio", image: "assets/images/compressed/fragrant_ending.webp", video: "", secondary: "The Fragrant Flower Blooms with Dignity" },
+      { name: "The 1", image: "assets/images/compressed/the_1.webp", video: "", secondary: "One Piece" },
+      { name: "Ray of Light - Shoko Nakagawa", image: "assets/images/compressed/fmab_ed5.webp", video: "", secondary: "Fullmetal Alchemist: Brotherhood" },
     ]
   },
 
@@ -460,11 +460,11 @@ const CATEGORIES = [
     filter: "music",
     name: "Best Voice Artist Performance (English)",
     nominees: [
+      { name: "Amber Lee Connors", image: "assets/images/compressed/amber_lee.webp", video: "", secondary: "Furina / Mei Mei / Pieck Finger / Komi Shoko" },
+      { name: "Christopher Sabat", image: "assets/images/compressed/sabat.webp", video: "", secondary: "Roronoa Zoro / Vegeta / All Might / Alex Louis Armstrong / " },
       { name: "Felecia Angelle", image: "assets/images/compressed/felicia.webp", video: "", secondary: "Mona Megistus / Shinoa Hiragi / Emi Yusa / Nakano Miku / Shalltear Bloodfallen " },
       { name: "Ian Sinclair", image: "assets/images/compressed/ian_sinclair.webp", video: "", secondary: "Narrator (Kaguya Sama Love is War) / Brook / Space Dandy / Tsukasa Shishio / Whis" },
       { name: "Monica Rial", image: "assets/images/compressed/monica.webp", video: "", secondary: "Mirajane Strauss / Tsubaki Nakatsukasa / Index / Yona / Tanya von Degurechaff" },
-      { name: "", image: "", video: "", secondary: "" },
-      { name: "", image: "", video: "", secondary: "" },
     ]
   },
 
