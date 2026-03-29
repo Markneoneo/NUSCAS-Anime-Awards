@@ -95,7 +95,9 @@ function renderPage(pageIndex) {
     </div>
 
     ${isLast
-      ? `<button class="btn-page btn-submit-nav" onclick="submitAllVotes()">🏆 Submit Votes</button>`
+      ? `<button class="btn-page btn-submit-nav" onclick="submitAllVotes()">
+          ${Object.keys(currentVotes).length === CATEGORIES.length ? "🏆 Submit Votes" : `⚠️ ${CATEGORIES.length - Object.keys(currentVotes).length} left`}
+        </button>`
       : `<button class="btn-page btn-next" onclick="goToPage(${currentPage + 1})">Next →</button>`
     }
   `;
@@ -300,41 +302,31 @@ function submitAllVotes() {
     return;
   }
 
-  const summaryEl     = document.getElementById("modal-vote-summary");
-  const unvotedEl     = document.getElementById("modal-unvoted");
-  const unvotedTextEl = document.getElementById("unvoted-text");
+  const unvotedCategories = CATEGORIES.filter(cat => currentVotes[cat.id] === undefined);
 
+  if (unvotedCategories.length > 0) {
+    // Find the first unvoted category and navigate there
+    const firstUnvotedIndex = CATEGORIES.findIndex(cat => currentVotes[cat.id] === undefined);
+    showToast(`⚠️ Please vote in all categories first! ${unvotedCategories.length} remaining.`, true);
+    setTimeout(() => goToPage(firstUnvotedIndex), 600);
+    return;
+  }
+
+  // All voted — build summary
+  const summaryEl = document.getElementById("modal-vote-summary");
   let summaryHTML = "";
-  const unvotedCategories = [];
 
   CATEGORIES.forEach(cat => {
-    const votedIndex = currentVotes[cat.id];
-    if (votedIndex !== undefined) {
-      const nominee = cat.nominees[votedIndex];
-      summaryHTML += `
-        <div class="vote-summary-item">
-          <span class="summary-category">${cat.name}</span>
-          <span class="summary-pick">${nominee.name}</span>
-        </div>`;
-    } else {
-      unvotedCategories.push(cat.name);
-      summaryHTML += `
-        <div class="vote-summary-item">
-          <span class="summary-category">${cat.name}</span>
-          <span class="summary-novote">No vote</span>
-        </div>`;
-    }
+    const nominee = cat.nominees[currentVotes[cat.id]];
+    summaryHTML += `
+      <div class="vote-summary-item">
+        <span class="summary-category">${cat.name}</span>
+        <span class="summary-pick">${nominee.name}</span>
+      </div>`;
   });
 
   summaryEl.innerHTML = summaryHTML;
-
-  if (unvotedCategories.length > 0) {
-    unvotedEl.style.display = "flex";
-    unvotedTextEl.textContent = `You haven't voted in ${unvotedCategories.length} categor${unvotedCategories.length === 1 ? "y" : "ies"} yet. You can still submit — unvoted categories will be skipped.`;
-  } else {
-    unvotedEl.style.display = "none";
-  }
-
+  document.getElementById("modal-unvoted").style.display = "none";
   document.getElementById("submit-modal").style.display = "flex";
 }
 

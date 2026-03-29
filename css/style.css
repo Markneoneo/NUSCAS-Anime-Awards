@@ -34,11 +34,11 @@ body {
   color: var(--white);
   min-height: 100vh;
   overflow-x: hidden;
-  padding-top: 280px;
+  padding-top: 240px;
 }
 
 @media (max-width: 600px) {
-  body { padding-top: 400px; }
+  body { padding-top: 340px; }
 }
 
 /* ============================
@@ -80,16 +80,6 @@ body {
   pointer-events: none;
 }
 
-.site-logo {
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
-  transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s ease;
-  /* This adds a very faint 'aura' around the logo */
-}
-
-/* 4. Smoothly shrink the logo and text */
-.site-logo {
-  transition: height 0.3s ease;
-}
 .site-header.compact .site-logo {
   height: 48px; /* Shrinks the logo */
 }
@@ -110,14 +100,35 @@ body {
   overflow: hidden;
 }
 
-.site-header.compact .header-eyebrow,
-.site-header.compact .title-line2,
 .site-header.compact .header-subtitle {
   opacity: 0;
   max-height: 0;
   margin-top: 0;
   margin-bottom: 0;
   pointer-events: none;
+}
+
+/* Ensure the '1st Annual' eyebrow stays visible in compact mode */
+.site-header.compact .header-eyebrow {
+  opacity: 1;
+  max-height: 20px;
+  font-size: 10px; /* Smaller for the thin bar */
+  margin-bottom: 2px;
+  pointer-events: auto;
+}
+
+/* Keep the title shrinking as before */
+.site-header.compact .site-title {
+  margin-bottom: 0;
+}
+
+/* Ensure 'Anime Awards' (title-line2) stays visible in compact mode */
+.site-header.compact .title-line2 {
+  opacity: 1;
+  max-height: 40px;
+  font-size: 18px; /* Scaled down for the thin bar */
+  margin-top: -4px;
+  display: block;
 }
 
 /* ── COMPACT HEADER: PROGRESS BAR ── */
@@ -198,9 +209,9 @@ body {
 }
 
 .header-inner {
-  max-width: 100%;
+  max-width: 900px;
   padding: 0 24px;
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   gap: 32px;
@@ -208,11 +219,19 @@ body {
   z-index: 1;
 }
 
+.site-header.compact .header-inner {
+  max-width: 100%;
+  margin: 0;
+}
+
+/* Enhanced Logo Glow */
 .site-logo {
   height: 100px;
   width: auto;
-  filter: drop-shadow(0 4px 12px rgba(245,134,31,0.4));
+  filter: drop-shadow(0 0 15px rgba(245,134,31,0.8)) 
+          drop-shadow(0 0 30px rgba(245,134,31,0.4)); /* Doubled intensity */
   flex-shrink: 0;
+  transition: height 0.3s ease, filter 0.3s ease;
 }
 
 .header-eyebrow {
@@ -384,14 +403,14 @@ body {
 .main-content {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 40px 20px 80px;
+  padding: 40px 20px 40px;
 }
 
 /* ============================
    CATEGORY SECTION
    ============================ */
 .category-section {
-  margin-bottom: 64px;
+  margin-bottom: 32px;
   animation: fadeInUp 0.5s ease both;
 }
 
@@ -921,13 +940,13 @@ body {
 }
 
 /* ============================
-   ENHANCED FOOTER
+   ENHANCED FOOTER 
    ============================ */
 .site-footer {
   /* Linear gradient that feels like a soft light hitting the top edge */
   background: linear-gradient(to bottom, #161f36 0%, var(--navy-dark) 100%);
   border-top: 1px solid var(--card-border);
-  padding: 40px 24px;
+  padding: 24px 24px; /* Reduced padding from 40px to 24px for smaller height */
   position: relative;
   overflow: hidden;
 }
@@ -937,7 +956,8 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  left: 10%;
+  left: 50%; /* Moved to center */
+  transform: translateX(-50%); /* Keeps glow centered */
   width: 250px;
   height: 100px;
   background: radial-gradient(circle, rgba(245, 134, 31, 0.05) 0%, transparent 70%);
@@ -945,30 +965,38 @@ body {
 }
 
 .footer-inner {
-  max-width: 1100px; /* Matched to your main-content width */
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
-  align-items: center;
-  gap: 20px;
+  flex-direction: column; /* Stack logo and text vertically */
+  align-items: center;    /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  text-align: center;      /* Center text alignment */
+  gap: 12px;               /* Reduced gap for smaller height */
   position: relative;
   z-index: 1;
 }
 
 .footer-logo {
-  height: 52px;
+  height: 44px;
   width: auto;
-  opacity: 0.9; /* Slightly higher than before for better visibility */
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.1));
-  transition: opacity 0.3s ease;
+  opacity: 0.9;
+  /* Matching the high-intensity aura from the header */
+  filter: drop-shadow(0 0 12px rgba(245, 134, 31, 0.7)) 
+          drop-shadow(0 0 20px rgba(245, 134, 31, 0.3));
+  transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
 .footer-logo:hover {
   opacity: 1;
+  filter: drop-shadow(0 0 15px rgba(245, 134, 31, 0.9)) 
+          drop-shadow(0 0 25px rgba(245, 134, 31, 0.5));
 }
 
 .footer-text-wrap {
   display: flex;
   flex-direction: column;
+  align-items: center; /* Center the text lines */
 }
 
 .footer-name {
@@ -1035,7 +1063,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin: 2.5rem 0 3rem;
+  margin: 1rem 0 2rem;
   padding: 0 0.5rem;
 }
 
@@ -1262,12 +1290,12 @@ body {
   .page-dots { display: none; }
   
   /* Show the mobile dropdown */
-  .custom-mobile-dropdown { 
+  /* .custom-mobile-dropdown { 
     display: block; 
     width: 100%; 
-    max-width: 100%; /* Allow it to fill the screen width */
+    max-width: 100%; 
     margin-top: 10px;
-  }
+  } */
   
   /* Use CSS Grid to organize the nav controls */
   .page-nav { 
