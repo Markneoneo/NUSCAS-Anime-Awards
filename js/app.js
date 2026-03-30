@@ -7,7 +7,7 @@
 // ── CONFIG ───────────────────────────────────────────────────
 const CONFIG = {
   // Paste your Google Apps Script Web App URL here after setup
-  GOOGLE_SHEET_URL: "https://script.google.com/macros/s/AKfycbypVRc6k89MVCiw04BYWTmSvytkAPJ5v45sJ2bDHkjFaZDKvbPnKM53OjigfXMgjVwP/exec",
+  GOOGLE_SHEET_URL: "https://script.google.com/macros/s/AKfycbztsBpwyEUT3g-E9t0yx27IRrNLWKbj7dfjH_0slVniEsw77kDp_bZpYsUouA4M6DY/exec",
 
   // Change this to prevent duplicate submissions
   // "localStorage" = one vote per browser (default)
