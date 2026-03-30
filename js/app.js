@@ -238,6 +238,7 @@ function selectNominee(categoryId, nomineeIndex) {
 
   saveVotesToStorage();
   updateProgressBar();
+  updateSubmitButton();
 
   // Refresh the dot row so the current dot lights up as voted immediately
   const dotsEl = document.querySelector(".page-dots");
@@ -364,6 +365,13 @@ async function confirmSubmit() {
     showToast("❌ Submission failed. Please try again.", true);
     console.error("Submission error:", err);
   }
+}
+
+function updateSubmitButton() {
+  const btn = document.querySelector(".btn-submit-nav");
+  if (!btn) return; // not on last page, do nothing
+  const remaining = CATEGORIES.length - Object.keys(currentVotes).length;
+  btn.textContent = remaining === 0 ? "🏆 Submit Votes" : `⚠️ ${remaining} left`;
 }
 
 // ── GOOGLE SHEETS INTEGRATION ─────────────────────────────────
