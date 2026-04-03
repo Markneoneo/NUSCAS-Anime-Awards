@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NUS CAS Anime Awards — Ceremony</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;700;800;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar-overlay" id="sidebar-overlay" onclick="closeSidebar()"></div>
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <span class="sidebar-title">Category List</span>
+      <button class="sidebar-close" onclick="closeSidebar()">✕</button>
+    </div>
+    <div class="sidebar-body" id="sidebar-body">
+      <!-- injected by JS -->
+    </div>
+  </nav>
+
+  <!-- HERO HEADER -->
+  <header class="site-header">
+    <div class="header-bg-effects">
+      <div class="sparkle s1">✦</div>
+      <div class="sparkle s2">◆</div>
+      <div class="sparkle s3">✦</div>
+      <div class="sparkle s4">◆</div>
+      <div class="sparkle s5">✦</div>
+      <div class="sparkle s6">◆</div>
+    </div>
+    <div class="header-inner">
+      <button class="sidebar-toggle" onclick="openSidebar()" aria-label="Open category list">
+        <span></span><span></span><span></span>
+        <div class="sidebar-toggle-label">Categories</div>
+      </button>
+      <div class="logo-wrap">
+        <img src="../assets/logo-Photoroom.png" alt="NUS CAS Logo" class="site-logo" onerror="this.style.display='none'">
+      </div>
+      <div class="header-title-block">
+        <p class="header-eyebrow"><span class="jp-text">第1回</span> 1st Annual</p>
+        <h1 class="site-title">
+          <span class="title-line2">Anime Awards</span>
+        </h1>
+        <p class="header-subtitle ceremony-badge">Awards Ceremony</p>
+      </div>
+    </div>
+
+    <!-- Ceremony progress bar -->
+    <div class="header-cta">
+      <div class="voting-status-bar">
+        <div class="progress-info">
+          <span id="categories-revealed">0</span> / <span id="categories-total">25</span> winners revealed
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="reveal-progress-bar"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content" id="main-content">
+    <div class="categories-container" id="categories-container">
+      <!-- Categories injected by JS -->
+    </div>
+  </main>
+
+  <!-- WINNER REVEAL OVERLAY -->
+  <div class="winner-overlay" id="winner-overlay">
+    <div class="winner-overlay-bg" id="winner-overlay-bg"></div>
+    <div class="confetti-container" id="confetti-container"></div>
+    <div class="winner-card" id="winner-card">
+      <div class="winner-trophy">🏆</div>
+      <div class="winner-category-label" id="winner-category-label"></div>
+      <div class="winner-name" id="winner-name"></div>
+      <div class="winner-secondary" id="winner-secondary"></div>
+      <img class="winner-image" id="winner-image" src="" alt="" />
+      <button class="winner-close-btn" onclick="closeWinnerOverlay()">Continue →</button>
+    </div>
+  </div>
+
+  <!-- SUCCESS TOAST -->
+  <div class="toast" id="toast" style="display:none">
+    <span class="toast-icon">✅</span>
+    <span id="toast-msg">Done!</span>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img src="../assets/logo-Photoroom.png" alt="NUSCAS Logo" class="footer-logo">
+      <div class="footer-text-wrap">
+        <div class="footer-name">NUS Comics & Animation Society</div>
+        <div class="footer-sub">Anime Awards &nbsp;·&nbsp; Awards Ceremony</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
